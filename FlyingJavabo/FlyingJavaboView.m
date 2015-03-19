@@ -2,9 +2,6 @@
 //  FlyingJavaboView.m
 //  FlyingJavabo
 //
-//  Created by davy on 2015/03/19.
-//  Copyright (c) 2015年 Arigato Java. All rights reserved.
-//
 
 #import "FlyingJavaboView.h"
 
@@ -12,41 +9,47 @@
 
 - (instancetype)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
 {
-    self = [super initWithFrame:frame isPreview:isPreview];
-    if (self) {
-        [self setAnimationTimeInterval:1/30.0];
-    }
-    return self;
+	self = [super initWithFrame:frame isPreview:isPreview];
+	if (self) {
+		glView=[[JavaboGLView alloc] initWithFrame:[self bounds]];
+		[self addSubview:glView];
+		[self setAnimationTimeInterval:1/60.0];
+	}
+	return self;
 }
 
 - (void)startAnimation
 {
-    [super startAnimation];
+	[super startAnimation];
+	startTime=[NSDate date];
 }
 
 - (void)stopAnimation
 {
-    [super stopAnimation];
+	[super stopAnimation];
 }
 
 - (void)drawRect:(NSRect)rect
 {
-    [super drawRect:rect];
+	[super drawRect:rect];
 }
 
 - (void)animateOneFrame
 {
-    return;
+	NSTimeInterval seconds=-[startTime timeIntervalSinceNow];
+	[glView setElapsedTime:seconds];
+	[glView setNeedsDisplay:YES];
+	return;
 }
 
 - (BOOL)hasConfigureSheet
 {
-    return NO;
+	return NO;
 }
 
 - (NSWindow*)configureSheet
 {
-    return nil;
+	return nil;
 }
 
 @end

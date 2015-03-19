@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		5B3A55D11ABA4FE200A2D9F7 /* FlyingJavaboView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B3A55D01ABA4FE200A2D9F7 /* FlyingJavaboView.h */; };
 		5B3A55D31ABA4FE200A2D9F7 /* FlyingJavaboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A55D21ABA4FE200A2D9F7 /* FlyingJavaboView.m */; };
+		5B3A55DB1ABA58EC00A2D9F7 /* JavaboGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B3A55D91ABA58EC00A2D9F7 /* JavaboGLView.h */; };
+		5B3A55DC1ABA58EC00A2D9F7 /* JavaboGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A55DA1ABA58EC00A2D9F7 /* JavaboGLView.m */; };
+		5B3A55E11ABA78D200A2D9F7 /* floor.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A55DF1ABA78D200A2D9F7 /* floor.c */; };
+		5B3A55E51ABA8D8200A2D9F7 /* sky.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A55E31ABA8D8200A2D9F7 /* sky.c */; };
+		5B3A55E81ABA98B100A2D9F7 /* javabutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3A55E71ABA98B100A2D9F7 /* javabutton.png */; };
+		5B3A55EB1ABA994400A2D9F7 /* JavaButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B3A55E91ABA994400A2D9F7 /* JavaButton.h */; };
+		5B3A55EC1ABA994400A2D9F7 /* JavaButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A55EA1ABA994400A2D9F7 /* JavaButton.m */; };
+		5BF51C461ABABE7A00CA470F /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF51C451ABABE7A00CA470F /* libcrypto.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +24,14 @@
 		5B3A55CF1ABA4FE200A2D9F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B3A55D01ABA4FE200A2D9F7 /* FlyingJavaboView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlyingJavaboView.h; sourceTree = "<group>"; };
 		5B3A55D21ABA4FE200A2D9F7 /* FlyingJavaboView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyingJavaboView.m; sourceTree = "<group>"; };
+		5B3A55D91ABA58EC00A2D9F7 /* JavaboGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaboGLView.h; sourceTree = "<group>"; };
+		5B3A55DA1ABA58EC00A2D9F7 /* JavaboGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaboGLView.m; sourceTree = "<group>"; };
+		5B3A55DF1ABA78D200A2D9F7 /* floor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = floor.c; sourceTree = "<group>"; };
+		5B3A55E31ABA8D8200A2D9F7 /* sky.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sky.c; sourceTree = "<group>"; };
+		5B3A55E71ABA98B100A2D9F7 /* javabutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = javabutton.png; sourceTree = "<group>"; };
+		5B3A55E91ABA994400A2D9F7 /* JavaButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaButton.h; sourceTree = "<group>"; };
+		5B3A55EA1ABA994400A2D9F7 /* JavaButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaButton.m; sourceTree = "<group>"; };
+		5BF51C451ABABE7A00CA470F /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF51C461ABABE7A00CA470F /* libcrypto.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +49,7 @@
 		5B3A55C11ABA4FE200A2D9F7 = {
 			isa = PBXGroup;
 			children = (
+				5BF51C451ABABE7A00CA470F /* libcrypto.dylib */,
 				5B3A55CD1ABA4FE200A2D9F7 /* FlyingJavabo */,
 				5B3A55CC1ABA4FE200A2D9F7 /* Products */,
 			);
@@ -51,6 +69,12 @@
 				5B3A55D01ABA4FE200A2D9F7 /* FlyingJavaboView.h */,
 				5B3A55D21ABA4FE200A2D9F7 /* FlyingJavaboView.m */,
 				5B3A55CE1ABA4FE200A2D9F7 /* Supporting Files */,
+				5B3A55D91ABA58EC00A2D9F7 /* JavaboGLView.h */,
+				5B3A55DA1ABA58EC00A2D9F7 /* JavaboGLView.m */,
+				5B3A55DF1ABA78D200A2D9F7 /* floor.c */,
+				5B3A55E91ABA994400A2D9F7 /* JavaButton.h */,
+				5B3A55EA1ABA994400A2D9F7 /* JavaButton.m */,
+				5B3A55E31ABA8D8200A2D9F7 /* sky.c */,
 			);
 			path = FlyingJavabo;
 			sourceTree = "<group>";
@@ -58,6 +82,7 @@
 		5B3A55CE1ABA4FE200A2D9F7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5B3A55E71ABA98B100A2D9F7 /* javabutton.png */,
 				5B3A55CF1ABA4FE200A2D9F7 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -71,6 +96,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B3A55D11ABA4FE200A2D9F7 /* FlyingJavaboView.h in Headers */,
+				5B3A55DB1ABA58EC00A2D9F7 /* JavaboGLView.h in Headers */,
+				5B3A55EB1ABA994400A2D9F7 /* JavaButton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B3A55E81ABA98B100A2D9F7 /* javabutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B3A55E11ABA78D200A2D9F7 /* floor.c in Sources */,
+				5B3A55EC1ABA994400A2D9F7 /* JavaButton.m in Sources */,
+				5B3A55E51ABA8D8200A2D9F7 /* sky.c in Sources */,
+				5B3A55DC1ABA58EC00A2D9F7 /* JavaboGLView.m in Sources */,
 				5B3A55D31ABA4FE200A2D9F7 /* FlyingJavaboView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +295,7 @@
 				5B3A55D81ABA4FE200A2D9F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
