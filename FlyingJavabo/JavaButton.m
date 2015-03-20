@@ -96,7 +96,7 @@
 }
 + (double)random: (double)max {
 	uint32_t randombits;
-	RAND_bytes(&randombits,sizeof(randombits));
+	RAND_bytes((void *)&randombits,sizeof(randombits));
 	return max*((double)randombits/(double)UINT32_MAX);
 }
 - (GLuint)prepareJavaboDispList {
