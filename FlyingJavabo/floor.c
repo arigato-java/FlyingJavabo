@@ -1,10 +1,10 @@
 // floor
 #include <OpenGL/gl.h>
 
-static GLuint floorTexName;
-static void setupFloorTex(void);
+static GLuint setupFloorTex(void);
 
-static void setupFloorTex() {
+static GLuint setupFloorTex() {
+	GLuint floorTexName;
 	static const GLubyte boxes[]={
 		0x40,0xcc,0xcc,0x40
 	};
@@ -21,10 +21,11 @@ static void setupFloorTex() {
 				 2,2,0,
 				 GL_LUMINANCE,GL_UNSIGNED_BYTE,
 				 boxes);
+	return floorTexName;
 }
 
 extern GLuint prepareFloorDispList() {
-	setupFloorTex();
+	GLuint floorTexName=setupFloorTex();
 	
 	GLuint floorDispList=glGenLists(1);
 	glNewList(floorDispList, GL_COMPILE);
