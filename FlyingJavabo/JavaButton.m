@@ -6,10 +6,10 @@
 #import "JavaButton.h"
 
 @implementation JavaButton
-- (GLuint)loadJavaboTex {
++ (GLuint)loadTexOfName:(NSString*)name ofType:(NSString*)type {
 	GLuint javaboTexName;
 	NSString *javabuttonPath=[[NSBundle bundleWithIdentifier:@"es.esy.arigato-java.FlyingJavabo"]
-							  pathForResource:@"javabutton" ofType:@"png"];
+							  pathForResource:name ofType:type];
 	NSImage *jbImg=[[NSImage alloc] initWithContentsOfFile:javabuttonPath];
 	if(jbImg==nil) {
 		return -1;
@@ -19,6 +19,7 @@
 	NSInteger height=CGImageGetHeight(image);
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB);
 	CGContextRef context=CGBitmapContextCreate(NULL,width,height,8,4*width,colorSpace,(CGBitmapInfo)kCGImageAlphaPremultipliedLast);
+	CGColorSpaceRelease(colorSpace);
 	if(!context) { return -2; }
 	CGContextDrawImage(context,CGRectMake(0.f,0.f,(float)width,(float)height),image);
 	
@@ -40,7 +41,7 @@
 	return javaboTexName;
 }
 - (GLuint)prepareSingleJavaboDispList {
-	GLuint javaboTexName=[self loadJavaboTex];
+	GLuint javaboTexName=[[self class] loadTexOfName:@"javabutton" ofType:@"png"];
 	if(javaboTexName==-1) {
 		NSLog(@"javabo texture load failed.");
 	}
@@ -51,7 +52,7 @@
 	#define JAVABO_RIGHT	.8f
 	#define JAVABO_TOP		-.2f
 	#define JAVABO_BOTTOM	.2f
-	#define JAVABO_Z		3.f
+	#define JAVABO_Z		0.f
 	static const GLfloat vertices[]={
 		JAVABO_LEFT, JAVABO_TOP, JAVABO_Z,
 		JAVABO_LEFT, JAVABO_BOTTOM, JAVABO_Z,
