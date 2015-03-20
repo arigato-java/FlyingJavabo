@@ -8,5 +8,6 @@
 
 @interface JavaButton : NSObject
 + (GLuint)loadTexOfName:(NSString*)name ofType:(NSString*)type;
++ (double)random: (double)max;
 - (GLuint)prepareJavaboDispList;
 @end

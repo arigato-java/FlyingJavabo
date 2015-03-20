@@ -16,6 +16,9 @@
 		5B3A55E81ABA98B100A2D9F7 /* javabutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3A55E71ABA98B100A2D9F7 /* javabutton.png */; };
 		5B3A55EB1ABA994400A2D9F7 /* JavaButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B3A55E91ABA994400A2D9F7 /* JavaButton.h */; };
 		5B3A55EC1ABA994400A2D9F7 /* JavaButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A55EA1ABA994400A2D9F7 /* JavaButton.m */; };
+		5B5D922F1ABC070500AD7009 /* duke.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B5D922E1ABC070500AD7009 /* duke.png */; };
+		5B5D92321ABC0DD900AD7009 /* Duke.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5D92301ABC0DD900AD7009 /* Duke.h */; };
+		5B5D92331ABC0DD900AD7009 /* Duke.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5D92311ABC0DD900AD7009 /* Duke.m */; };
 		5BF51C461ABABE7A00CA470F /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF51C451ABABE7A00CA470F /* libcrypto.dylib */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,9 @@
 		5B3A55E71ABA98B100A2D9F7 /* javabutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = javabutton.png; sourceTree = "<group>"; };
 		5B3A55E91ABA994400A2D9F7 /* JavaButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaButton.h; sourceTree = "<group>"; };
 		5B3A55EA1ABA994400A2D9F7 /* JavaButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaButton.m; sourceTree = "<group>"; };
+		5B5D922E1ABC070500AD7009 /* duke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = duke.png; sourceTree = "<group>"; };
+		5B5D92301ABC0DD900AD7009 /* Duke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Duke.h; sourceTree = "<group>"; };
+		5B5D92311ABC0DD900AD7009 /* Duke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Duke.m; sourceTree = "<group>"; };
 		5BF51C451ABABE7A00CA470F /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -73,6 +79,8 @@
 				5B3A55DA1ABA58EC00A2D9F7 /* JavaboGLView.m */,
 				5B3A55DF1ABA78D200A2D9F7 /* floor.c */,
 				5B3A55E91ABA994400A2D9F7 /* JavaButton.h */,
+				5B5D92301ABC0DD900AD7009 /* Duke.h */,
+				5B5D92311ABC0DD900AD7009 /* Duke.m */,
 				5B3A55EA1ABA994400A2D9F7 /* JavaButton.m */,
 				5B3A55E31ABA8D8200A2D9F7 /* sky.c */,
 			);
@@ -82,6 +90,7 @@
 		5B3A55CE1ABA4FE200A2D9F7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5B5D922E1ABC070500AD7009 /* duke.png */,
 				5B3A55E71ABA98B100A2D9F7 /* javabutton.png */,
 				5B3A55CF1ABA4FE200A2D9F7 /* Info.plist */,
 			);
@@ -96,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B3A55D11ABA4FE200A2D9F7 /* FlyingJavaboView.h in Headers */,
+				5B5D92321ABC0DD900AD7009 /* Duke.h in Headers */,
 				5B3A55DB1ABA58EC00A2D9F7 /* JavaboGLView.h in Headers */,
 				5B3A55EB1ABA994400A2D9F7 /* JavaButton.h in Headers */,
 			);
@@ -158,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5D922F1ABC070500AD7009 /* duke.png in Resources */,
 				5B3A55E81ABA98B100A2D9F7 /* javabutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +182,7 @@
 			files = (
 				5B3A55E11ABA78D200A2D9F7 /* floor.c in Sources */,
 				5B3A55EC1ABA994400A2D9F7 /* JavaButton.m in Sources */,
+				5B5D92331ABC0DD900AD7009 /* Duke.m in Sources */,
 				5B3A55E51ABA8D8200A2D9F7 /* sky.c in Sources */,
 				5B3A55DC1ABA58EC00A2D9F7 /* JavaboGLView.m in Sources */,
 				5B3A55D31ABA4FE200A2D9F7 /* FlyingJavaboView.m in Sources */,

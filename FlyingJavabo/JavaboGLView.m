@@ -6,9 +6,9 @@
 #import <OpenGL/OpenGL.h>
 #import <OpenGL/gl.h>
 #import <OpenGL/glu.h>
-#import <GLKit/GLKit.h>
 #import "JavaboGLView.h"
 #import "JavaButton.h"
+#import "Duke.h"
 
 extern GLuint prepareFloorDispList(void);
 extern GLuint prepareSkyDispList(void);
@@ -62,6 +62,7 @@ extern GLuint prepareSkyDispList(void);
 	floorDispList=prepareFloorDispList();
 	skyDispList=prepareSkyDispList();
 	javaboDispList=[[[JavaButton alloc] init] prepareJavaboDispList];
+	dukeDispList=[[[Duke alloc] init] prepareDispList];
 }
 - (void)drawRect:(NSRect)dirtyRect {
 	[super drawRect:dirtyRect];
@@ -80,6 +81,14 @@ extern GLuint prepareSkyDispList(void);
 	glCallList(javaboDispList);
 	glTranslatef(0.f,0.f,64.f);
 	glCallList(javaboDispList);
+	glPopMatrix();
+	
+	static const uint32_t duke_speed=0xff;
+	glPushMatrix();
+	glTranslatef(.01f,.01f,-64.f*(float)(t&duke_speed)/(float)duke_speed);
+	glCallList(dukeDispList);
+	glTranslatef(0.f,0.f,64.f);
+	glCallList(dukeDispList);
 	glPopMatrix();
 	
 	[[self openGLContext] flushBuffer];

@@ -94,6 +94,11 @@
 	
 	return javaboDispListName;
 }
++ (double)random: (double)max {
+	uint32_t randombits;
+	RAND_bytes(&randombits,sizeof(randombits));
+	return max*((double)randombits/(double)UINT32_MAX);
+}
 - (GLuint)prepareJavaboDispList {
 	static const long numJavaBo=96;
 	
@@ -102,12 +107,10 @@
 	glNewList(javaboCageDispListName,GL_COMPILE);
 	
 	for(long i=0; i<numJavaBo; i++) {
-		uint32_t xyz[3];
 		double x,y,z;
-		RAND_bytes((void *)xyz,12);
-		x=-10.+20.*((double)xyz[0]/(double)UINT32_MAX);
-		y=-1.+6.*((double)xyz[1]/(double)UINT32_MAX);
-		z=-1.+64.*((double)xyz[2]/(double)UINT32_MAX);
+		x=-10.+[[self class] random:20.];
+		y=-1.+[[self class] random:6.];
+		z=-1.+[[self class] random:64.];
 		glPushMatrix();
 		glTranslated(x,y,z);
 		glCallList(singleJavabo);
