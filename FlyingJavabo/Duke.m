@@ -4,7 +4,6 @@
 //
 #import "Duke.h"
 #import "JavaButton.h"
-#import <openssl/rand.h>
 
 @implementation Duke
 - (GLuint)prepareDukeDispList {
@@ -14,8 +13,8 @@
 
 	#define DUKE_LEFT		-.2f
 	#define DUKE_RIGHT	.2f
-	#define DUKE_TOP		-1.f
-	#define DUKE_BOTTOM	-.6f
+	#define DUKE_TOP		-1.18f
+	#define DUKE_BOTTOM	-.78f
 	#define DUKE_Z		0.f
 	static const GLfloat vertices[]={
 		DUKE_LEFT, DUKE_TOP, DUKE_Z,
@@ -57,7 +56,7 @@
 	glEndList();
 	return dukeDispListName;
 }
-- (GLuint)prepareDispList {
+- (GLuint)dispListWithShadow:(GLuint)shadow {
 	static const long nDuke=64;
 	GLuint dukeDispList=[self prepareDukeDispList];
 	GLuint dukeCageDispListName=glGenLists(1);
@@ -69,6 +68,8 @@
 		glPushMatrix();
 		glTranslated(x,0.,z);
 		glCallList(dukeDispList);
+		glScalef(.12f,1.f,.2f);
+		glCallList(shadow);
 		glPopMatrix();
 	}
 	

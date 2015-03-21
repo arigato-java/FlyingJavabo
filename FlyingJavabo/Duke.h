@@ -10,5 +10,5 @@
 #import <OpenGL/gl.h>
 
 @interface Duke : NSObject
-- (GLuint)prepareDispList;
+- (GLuint)dispListWithShadow:(GLuint)shadow;
 @end

@@ -12,6 +12,7 @@
 
 extern GLuint prepareFloorDispList(void);
 extern GLuint prepareSkyDispList(void);
+extern GLuint shadowDispList(void);
 
 @implementation JavaboGLView
 - (instancetype)initWithFrame:(NSRect)frameRect {
@@ -61,8 +62,9 @@ extern GLuint prepareSkyDispList(void);
 
 	floorDispList=prepareFloorDispList();
 	skyDispList=prepareSkyDispList();
-	javaboDispList=[[[JavaButton alloc] init] prepareJavaboDispList];
-	dukeDispList=[[[Duke alloc] init] prepareDispList];
+	GLuint shadow=shadowDispList();
+	javaboDispList=[[[JavaButton alloc] init] dispListWithShadow:shadow];
+	dukeDispList=[[[Duke alloc] init] dispListWithShadow:shadow];
 }
 - (void)drawRect:(NSRect)dirtyRect {
 	[super drawRect:dirtyRect];

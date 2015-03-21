@@ -99,7 +99,7 @@
 	RAND_bytes((void *)&randombits,sizeof(randombits));
 	return max*((double)randombits/(double)UINT32_MAX);
 }
-- (GLuint)prepareJavaboDispList {
+- (GLuint)dispListWithShadow:(GLuint)shadow {
 	static const long numJavaBo=96;
 	
 	GLuint singleJavabo=[self prepareSingleJavaboDispList];
@@ -114,6 +114,12 @@
 		glPushMatrix();
 		glTranslated(x,y,z);
 		glCallList(singleJavabo);
+		glPopMatrix();
+		
+		glPushMatrix();
+		glTranslated(x,0.,z);
+		glScalef(.8f,1.f,.05f);
+		glCallList(shadow);
 		glPopMatrix();
 	}
 	

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0F20B61ABD3D460015B2D6 /* shadow.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B0F20B51ABD3D460015B2D6 /* shadow.c */; };
 		5B3A55D11ABA4FE200A2D9F7 /* FlyingJavaboView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B3A55D01ABA4FE200A2D9F7 /* FlyingJavaboView.h */; };
 		5B3A55D31ABA4FE200A2D9F7 /* FlyingJavaboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A55D21ABA4FE200A2D9F7 /* FlyingJavaboView.m */; };
 		5B3A55DB1ABA58EC00A2D9F7 /* JavaboGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B3A55D91ABA58EC00A2D9F7 /* JavaboGLView.h */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B0F20B51ABD3D460015B2D6 /* shadow.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = shadow.c; sourceTree = "<group>"; };
 		5B3A55CB1ABA4FE200A2D9F7 /* FlyingJavabo.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyingJavabo.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3A55CF1ABA4FE200A2D9F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B3A55D01ABA4FE200A2D9F7 /* FlyingJavaboView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlyingJavaboView.h; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				5B3A55D91ABA58EC00A2D9F7 /* JavaboGLView.h */,
 				5B3A55DA1ABA58EC00A2D9F7 /* JavaboGLView.m */,
 				5B3A55DF1ABA78D200A2D9F7 /* floor.c */,
+				5B0F20B51ABD3D460015B2D6 /* shadow.c */,
 				5B3A55E91ABA994400A2D9F7 /* JavaButton.h */,
 				5B5D92301ABC0DD900AD7009 /* Duke.h */,
 				5B5D92311ABC0DD900AD7009 /* Duke.m */,
@@ -182,6 +185,7 @@
 			files = (
 				5B3A55E11ABA78D200A2D9F7 /* floor.c in Sources */,
 				5B3A55EC1ABA994400A2D9F7 /* JavaButton.m in Sources */,
+				5B0F20B61ABD3D460015B2D6 /* shadow.c in Sources */,
 				5B5D92331ABC0DD900AD7009 /* Duke.m in Sources */,
 				5B3A55E51ABA8D8200A2D9F7 /* sky.c in Sources */,
 				5B3A55DC1ABA58EC00A2D9F7 /* JavaboGLView.m in Sources */,
