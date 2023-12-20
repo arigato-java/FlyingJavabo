@@ -2,13 +2,16 @@
 //  JavaButton.m
 //
 
-#import <openssl/rand.h>
+#import <Security/SecRandom.h>
 #import "JavaButton.h"
 
+#define STRINGIFY(x) #x
+#define PRODBUNDLE_NSSTR(x) @STRINGIFY(x)
 @implementation JavaButton
 + (GLuint)loadTexOfName:(NSString*)name ofType:(NSString*)type {
 	GLuint javaboTexName;
-	NSString *javabuttonPath=[[NSBundle bundleWithIdentifier:@"es.esy.arigato-java.FlyingJavabo"]
+	// Screensavers cannot get its bundle with mainBundle
+	NSString *javabuttonPath=[[NSBundle bundleWithIdentifier:PRODBUNDLE_NSSTR(PRODUCT_BUNDLE_IDENTIFIER)]
 							  pathForResource:name ofType:type];
 	NSImage *jbImg=[[NSImage alloc] initWithContentsOfFile:javabuttonPath];
 	if(jbImg==nil) {
@@ -40,6 +43,7 @@
 	CGContextRelease(context);
 	return javaboTexName;
 }
+
 - (GLuint)prepareSingleJavaboDispList {
 	GLuint javaboTexName=[[self class] loadTexOfName:@"javabutton" ofType:@"png"];
 	if(javaboTexName==-1) {
@@ -96,7 +100,10 @@
 }
 + (double)random: (double)max {
 	uint32_t randombits;
-	RAND_bytes((void *)&randombits,sizeof(randombits));
+	int result = SecRandomCopyBytes(kSecRandomDefault, sizeof(randombits),&randombits);
+	if (result != 0) {
+		return 0.;
+	}
 	return max*((double)randombits/(double)UINT32_MAX);
 }
 - (GLuint)dispListWithShadow:(GLuint)shadow {

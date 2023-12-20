@@ -1,6 +1,6 @@
 // sky
 #include <OpenGL/gl.h>
-extern GLuint prepareSkyDispList() {
+extern GLuint prepareSkyDispList(void) {
 	GLuint skyDispListName=glGenLists(1);
 	glNewList(skyDispListName, GL_COMPILE);
 	

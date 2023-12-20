@@ -7,7 +7,7 @@
 static GLubyte *generateShadowTex(void);
 static GLuint prepareShadowTex(void);
 
-static GLubyte *generateShadowTex() {
+static GLubyte *generateShadowTex(void) {
 	static GLubyte shadow[SHADOWTEX_DIM*SHADOWTEX_DIM];
 	long r=SHADOWTEX_DIM/2;
 	long r2=r*r;
@@ -21,7 +21,7 @@ static GLubyte *generateShadowTex() {
 	}
 	return shadow;
 }
-static GLuint prepareShadowTex() {
+static GLuint prepareShadowTex(void) {
 	GLubyte *shadowTex=generateShadowTex();
 	GLuint shadowTexName;
 	glPixelStorei(GL_UNPACK_ALIGNMENT,1);
@@ -39,7 +39,7 @@ static GLuint prepareShadowTex() {
 				 shadowTex);
 	return shadowTexName;
 }
-extern GLuint shadowDispList() {
+extern GLuint shadowDispList(void) {
 	GLuint shadowTexName=prepareShadowTex();;
 	
 	GLuint shadow=glGenLists(1);

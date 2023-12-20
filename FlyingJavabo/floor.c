@@ -3,7 +3,7 @@
 
 static GLuint setupFloorTex(void);
 
-static GLuint setupFloorTex() {
+static GLuint setupFloorTex(void) {
 	GLuint floorTexName;
 	static const GLubyte boxes[]={
 		0x40,0xcc,0xcc,0x40
@@ -24,7 +24,7 @@ static GLuint setupFloorTex() {
 	return floorTexName;
 }
 
-extern GLuint prepareFloorDispList() {
+extern GLuint prepareFloorDispList(void) {
 	GLuint floorTexName=setupFloorTex();
 	
 	GLuint floorDispList=glGenLists(1);
